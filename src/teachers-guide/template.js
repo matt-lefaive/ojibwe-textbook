@@ -3,8 +3,6 @@ import Sidebar from '../components/sidebar';
 import Lesson1 from './lessons/lesson-1';
 
 const Lesson = ({ number }) => {
-    const lessons = ['1'];
-    const num = lessons.indexOf(number);
     
     const linksLesson1 = [
         {title: 'Lesson 1', href: null}, // text
@@ -18,25 +16,25 @@ const Lesson = ({ number }) => {
         {title: 'Use of pronouns for emphasis', href: '1#use-of-pronouns-for-emphases'},
     ]
 
-    const links = [ 
-        linksLesson1, linksLesson1, linksLesson1
-    ];
+    const links = { 
+        '1': linksLesson1
+    };
 
     // Pair is [main, accent]
-    const themeColors = [
-        ['orange', 'navajowhite'], //1
-    ]
+    const themeColors = {
+        '1': ['orange', 'navajowhite'], 
+    }
 
     return (
         <div class='container-fluid'>
             <div class='row flex-nowrap'>
                 <div class='col-auto px-0'>
-                    <Sidebar links={links[num]} background={themeColors[num][0]}/>
+                    <Sidebar links={links[number]} background={themeColors[number][0]}/>
                 </div>
                 <main class='col ps-md-2 pt-2'>
                     <div class='container lesson-container' style={{padding: '1em 2em 1em 2em'}}>
                         <div class='row'>
-                            {number === '1a' && <Lesson1 colors={themeColors[num]}/>}
+                            {number === '1' && <Lesson1 colors={themeColors[number]}/>}
                         </div>
                     </div>
                     

@@ -7,10 +7,16 @@ import {
 
 import './styles/index.css';
 
-import TeachersGuideHome from './teachers-guide/home';
+import Home from './home';
+
 import TeachersGuideTemplate from './teachers-guide/template';
+import TeachersGuideHome from './teachers-guide/home';
 
 const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
   {
     path: '/teachers-guide',
     element: <TeachersGuideHome />
