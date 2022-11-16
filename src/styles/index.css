@@ -1,0 +1,153 @@
+/* ----- Page Setup ----- */
+
+body {
+    background-color: #2C2F33;
+    color: white;
+}
+
+
+
+/* ----- Sidebar Styling (Bootstrap Override) ----- */
+#sidebar-nav {
+    padding-top: 1em;
+    width: 250px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    overflow: auto;
+    max-height: 100vh;
+}
+
+a.sidebar-link {
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 2em;
+    color: white;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+a.sidebar-link:hover {
+    text-decoration: underline;
+}
+
+div.sidebar-text {
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    margin-left: 1em;
+}
+
+div.sidebar-divider {
+    height: 8px;
+    min-height: 8px;
+    background-color: #2C2F33;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* ----- Tables ----- */
+table.dialogue-table {
+    border-spacing: 0;
+    border-collapse: separate;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+table.dialogue-table > tr > td {
+    border-radius: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+table.dialogue-table > tr > td:first-child {
+    border-right: 1px solid darkgray;
+    border-radius: 0px;
+}
+
+table.text-center {
+    text-align: center;
+}
+
+table.full-border {
+    border-spacing: 0;
+    border-collapse: separate;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+table.full-border > tr > td,
+table.full-border > tr > th {
+    border-right: 1px solid darkgray;
+    border-radius: 0px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+table.full-border > tr > td:last-child,
+table.full-border > tr > th:last-child {
+    border-right: none;
+}
+
+table.full-border > tr > th {
+    border-bottom: 1px solid darkgray;
+}
+
+/* ----- Additional Card Styles ----- */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lesson-card {
+    width: 10rem;
+    height: 12rem;
+    margin: 1em;
+}
+
+.lesson-card:hover {
+    transform: scale(1.03);
+    transition: 0.25s ease-in-out;
+}
+
+/* ----- Lesson Styles ----- */
+.lesson-title-container {
+    margin-top: 1em;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.lesson-circle {
+    flex: 0 0 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    box-sizing: content-box;
+    font-size: 28px;
+}
+
+.lesson-title {
+    padding-top: 5px;
+    padding-left: 2em;
+    height: 60px;
+    line-height: 60px;
+    flex: 1 0 60px;
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+@media screen and (max-width: 801px) {
+    #sidebar-nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .lesson-container {
+        padding: 2em 5em !important;
+    }
+}
