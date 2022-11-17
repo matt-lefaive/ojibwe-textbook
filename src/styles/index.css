@@ -81,6 +81,7 @@ table.full-border {
 table.full-border > tr > td,
 table.full-border > tr > th {
     border-right: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
     border-radius: 0px;
     padding-left: 1em;
     padding-right: 1em;
@@ -88,6 +89,10 @@ table.full-border > tr > th {
 table.full-border > tr > td:last-child,
 table.full-border > tr > th:last-child {
     border-right: none;
+}
+
+table.full-border > tr:last-child > td {
+    border-bottom: none;
 }
 
 table.full-border > tr > th {
