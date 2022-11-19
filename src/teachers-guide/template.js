@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../components/sidebar';
 import Lesson1 from './lessons/lesson-1';
 import Lesson2 from './lessons/lesson-2';
+import Lesson3 from './lessons/lesson-3';
 
 const Lesson = ({ number }) => {
     
@@ -27,15 +28,28 @@ const Lesson = ({ number }) => {
         {title: 'VAI verbs', href: '2#vai-verbs'}
     ]
 
+    const linksLesson3 = [
+        {title: 'Lesson 3', href: null},
+        {title: 'Dialogue', href: '3#dialogue'},
+        {title: 'Inanimate nouns', href: '3#inanimate-nouns'},
+        {title: 'VAI verbs', href: '3#vai-verbs'},
+        {title: 'VII verbs', href: '3#vii-verbs'},
+        {title: 'Demonstrative pronouns', href: '3#demonstrative-pronouns'},
+        {title: 'Particles',  href: '3#particles'},
+        {title: 'Adverbs', href: '3#adverbs'}
+    ]
+
     const links = { 
         '1': linksLesson1,
-        '2': linksLesson2
+        '2': linksLesson2,
+        '3': linksLesson3,
     };
 
     // Pair is [main, accent]
     const themeColors = {
         '1': ['orange', 'navajowhite'], 
-        '2': ['#8967E6', '#CAB2F7']
+        '2': ['#8967E6', '#CAB2F7'],
+        '3': ['#F71B1B', '#F57F7F'],
     }
 
     const css = `
@@ -69,6 +83,7 @@ const Lesson = ({ number }) => {
                             <div class='row'>
                                 {number === '1' && <Lesson1 colors={themeColors[number]}/>}
                                 {number === '2' && <Lesson2 colors={themeColors[number]}/>}
+                                {number === '3' && <Lesson3 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>

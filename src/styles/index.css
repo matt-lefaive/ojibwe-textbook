@@ -47,8 +47,14 @@ div.sidebar-divider {
 }
 
 /* ----- Tables ----- */
-table {
+table.no-border {
     margin-bottom: 1em;
+}
+
+table.no-border > tr > td,
+table.no-border > tr > th {
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 table.dialogue-table {
@@ -56,6 +62,7 @@ table.dialogue-table {
     border-collapse: separate;
     border: 1px solid darkgray;
     border-radius: 10px;
+    margin-bottom: 1em;
 }
 
 table.dialogue-table > tr > td {

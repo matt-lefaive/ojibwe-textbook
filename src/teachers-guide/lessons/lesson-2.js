@@ -92,7 +92,7 @@ const Lesson2 = ({ colors }) => {
                 Here is a handy chart adapted from Rand Valentine’s “Western Dictionary” computer program. For the first-person prefixes, the <strong>n</strong> in parentheses indicates that this sound is often not pronounced.
             </p>
 
-            <table>
+            <table className='no-border'>
                 <tr>
                     <th></th>
                     <th>1st niin</th>
