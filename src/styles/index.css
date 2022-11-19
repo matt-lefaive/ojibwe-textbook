@@ -47,12 +47,15 @@ div.sidebar-divider {
 }
 
 /* ----- Tables ----- */
+table {
+    margin-bottom: 1em;
+}
+
 table.dialogue-table {
     border-spacing: 0;
     border-collapse: separate;
     border: 1px solid darkgray;
     border-radius: 10px;
-    margin-bottom: 1em;
 }
 
 table.dialogue-table > tr > td {
