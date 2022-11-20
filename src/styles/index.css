@@ -20,9 +20,8 @@ body {
 
 a.sidebar-link {
     text-decoration: none;
-    font-weight: bold;
     margin-left: 2em;
-    color: white;
+    color: #2C2F33;
     font-size: 18px;
     margin-top: 5px;
 }
@@ -34,7 +33,7 @@ a.sidebar-link:hover {
 div.sidebar-text {
     font-style: italic;
     font-size: 24px;
-    color: white;
+    color: #2C2F33;
     margin-left: 1em;
 }
 
