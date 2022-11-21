@@ -3,7 +3,8 @@ import Sidebar from '../components/sidebar';
 import Lesson1 from './lessons/lesson-1';
 import Lesson2 from './lessons/lesson-2';
 import Lesson3 from './lessons/lesson-3';
-import Lesson4 from './lessons/lesson-4'
+import Lesson4 from './lessons/lesson-4';
+import Lesson5 from './lessons/lesson-5';
 
 const Lesson = ({ number }) => {
     
@@ -48,13 +49,27 @@ const Lesson = ({ number }) => {
         {title: 'VTI and VTA verbs, introduction', href: '4#vti-and-vta-verbs-introduction'},
         {title: 'Plural demonstrative pronouns', href: '4#plural-demonstrative-pronouns'},
         {title: 'New VAI and VII verbs', href: '4#new-vai-and-vii-verbs'}
-    ]
+    ];
+
+    const linksLesson5 = [
+        {title: 'Lesson 5', href: null},
+        {title: 'Dialogue 1', href: '5#dialogue-1'},
+        {title: 'Dialogue 2', href: '5#dialogue-2'},
+        {title: 'Grammar Notes', href: '5#grammar-notes'},
+        {title: 'Notes on Words Used in the Dialog', href: '5#notes-on-words-used-in-the-dialog'},
+        {title: 'VTI Forms - Citation Form vs. Conjugated', href: '5#vti-forms-citation-form-vs-conjugated'},
+        {title: 'Plural Objects with VTI', href: '5#plural-objects-with-vti'},
+        {title: 'VTA Verbs - Citation Form and Conjugations', href: '5#vta-verbs-citation-form-and-conjugations'},
+        {title: 'Derived Verbs', href: '5#derived-verbs'},
+        {title: 'More VAI Verbs', href: '5#more-vai-verbs'}
+    ];
 
     const links = { 
         '1': linksLesson1,
         '2': linksLesson2,
         '3': linksLesson3,
         '4': linksLesson4,
+        '5': linksLesson5,
     };
 
     // Pair is [main, accent]
@@ -62,15 +77,16 @@ const Lesson = ({ number }) => {
         '1': ['orange', 'navajowhite'], 
         '2': ['#8967E6', '#CAB2F7'],
         '3': ['#F71B1B', '#F57F7F'],
-        '4': ['#B2F252', '#D4F2A7']
+        '4': ['#B2F252', '#D4F2A7'],
+        '5': ['#F7F73B', '#F5F59A'],
     }
 
     const css = `
-        strong {
+        main strong {
             color: ${themeColors[number][0]}
         }
 
-        em {
+        main em {
             color: ${themeColors[number][1]}
         }
 
@@ -98,6 +114,7 @@ const Lesson = ({ number }) => {
                                 {number === '2' && <Lesson2 colors={themeColors[number]}/>}
                                 {number === '3' && <Lesson3 colors={themeColors[number]}/>}
                                 {number === '4' && <Lesson4 colors={themeColors[number]}/>}
+                                {number === '5' && <Lesson5 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>
