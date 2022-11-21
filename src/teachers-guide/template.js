@@ -5,6 +5,7 @@ import Lesson2 from './lessons/lesson-2';
 import Lesson3 from './lessons/lesson-3';
 import Lesson4 from './lessons/lesson-4';
 import Lesson5 from './lessons/lesson-5';
+import Lesson6 from './lessons/lesson-6';
 
 const Lesson = ({ number }) => {
     
@@ -64,12 +65,23 @@ const Lesson = ({ number }) => {
         {title: 'More VAI Verbs', href: '5#more-vai-verbs'}
     ];
 
+    const linksLesson6 = [
+        {title: 'Lesson 6', href: null},
+        {title: 'Dialogue', href: '6#dialogue'},
+        {title: 'Plural Persons', href: '6#plural-persons'},
+        {title: 'Inclusive vs. exclusive “we”', href: '6#inclusive-vs-exclusive-we'},
+        {title: 'Verb Prefixes and Suffixes', href: '6#verb-prefixes-and-suffixes'},
+        {title: 'Preverbs', href: '6#preverbs'},
+        {title: 'More Animate and Inanimate Verb Pairs', href: '6#more-animate-and-inanimate-verb-pairs'}
+    ];
+
     const links = { 
         '1': linksLesson1,
         '2': linksLesson2,
         '3': linksLesson3,
         '4': linksLesson4,
         '5': linksLesson5,
+        '6': linksLesson6,
     };
 
     // Pair is [main, accent]
@@ -79,6 +91,7 @@ const Lesson = ({ number }) => {
         '3': ['#F71B1B', '#F57F7F'],
         '4': ['#B2F252', '#D4F2A7'],
         '5': ['#F7F73B', '#F5F59A'],
+        '6': ['#3674F7', '#729EFC'],
     }
 
     const css = `
@@ -115,6 +128,7 @@ const Lesson = ({ number }) => {
                                 {number === '3' && <Lesson3 colors={themeColors[number]}/>}
                                 {number === '4' && <Lesson4 colors={themeColors[number]}/>}
                                 {number === '5' && <Lesson5 colors={themeColors[number]}/>}
+                                {number === '6' && <Lesson6 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>
