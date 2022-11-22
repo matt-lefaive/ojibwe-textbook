@@ -6,6 +6,7 @@ import Lesson3 from './lessons/lesson-3';
 import Lesson4 from './lessons/lesson-4';
 import Lesson5 from './lessons/lesson-5';
 import Lesson6 from './lessons/lesson-6';
+import Lesson7 from './lessons/lesson-7';
 
 const Lesson = ({ number }) => {
     
@@ -75,6 +76,16 @@ const Lesson = ({ number }) => {
         {title: 'More Animate and Inanimate Verb Pairs', href: '6#more-animate-and-inanimate-verb-pairs'}
     ];
 
+    const linksLesson7 = [
+        {title: 'Lesson 7', href: null},
+        {title: 'Dialogue', href: '7#dialogue'},
+        {title: 'Towards a Full Verb Chart', href: '7#towards-a-full-verb-chart'},
+        {title: 'Obviative', href: '7#obviative'},
+        {title: 'Indefinite or “Someone” Form', href: '7#indefinite-or-someone-form'},
+        {title: 'Other Verb Forms Used in the Dialog', href: '7#other-verb-forms-used-in-the-dialog'},
+        {title: 'Direct vs. Indirect Objects', href: '7#direct-vs-indirect-objects'}
+    ];
+
     const links = { 
         '1': linksLesson1,
         '2': linksLesson2,
@@ -82,6 +93,7 @@ const Lesson = ({ number }) => {
         '4': linksLesson4,
         '5': linksLesson5,
         '6': linksLesson6,
+        '7': linksLesson7,
     };
 
     // Pair is [main, accent]
@@ -92,7 +104,8 @@ const Lesson = ({ number }) => {
         '4': ['#B2F252', '#D4F2A7'],
         '5': ['#F7F73B', '#F5F59A'],
         '6': ['#3674F7', '#729EFC'],
-    }
+        '7': ['#DE29F2', '#E88AF2'],
+    };
 
     const css = `
         main strong {
@@ -129,6 +142,7 @@ const Lesson = ({ number }) => {
                                 {number === '4' && <Lesson4 colors={themeColors[number]}/>}
                                 {number === '5' && <Lesson5 colors={themeColors[number]}/>}
                                 {number === '6' && <Lesson6 colors={themeColors[number]}/>}
+                                {number === '7' && <Lesson7 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>
