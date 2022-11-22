@@ -7,6 +7,7 @@ import Lesson4 from './lessons/lesson-4';
 import Lesson5 from './lessons/lesson-5';
 import Lesson6 from './lessons/lesson-6';
 import Lesson7 from './lessons/lesson-7';
+import Lesson8 from './lessons/lesson-8';
 
 const Lesson = ({ number }) => {
     
@@ -86,6 +87,15 @@ const Lesson = ({ number }) => {
         {title: 'Direct vs. Indirect Objects', href: '7#direct-vs-indirect-objects'}
     ];
 
+    const linksLesson8 = [
+        {title: 'Lesson 8', href: null},
+        {title: 'Dialogue', href: '8#dialogue'},
+        {title: 'Negative Verb Forms', href: '8#negative-verb-forms'},
+        {title: 'Paired VAI and VTI Verbs', href: '8#paired-vai-and-vti-verbs'},
+        {title: 'Conjunct Form', href: 'conjunct-form'},
+        {title: 'Expressions in the Dialog', href: '8#expressions-in-the-dialogue'}
+    ];
+
     const links = { 
         '1': linksLesson1,
         '2': linksLesson2,
@@ -94,6 +104,7 @@ const Lesson = ({ number }) => {
         '5': linksLesson5,
         '6': linksLesson6,
         '7': linksLesson7,
+        '8': linksLesson8
     };
 
     // Pair is [main, accent]
@@ -105,6 +116,7 @@ const Lesson = ({ number }) => {
         '5': ['#F7F73B', '#F5F59A'],
         '6': ['#3674F7', '#729EFC'],
         '7': ['#DE29F2', '#E88AF2'],
+        '8': ['#1DDCF5', '#9EEDF7']
     };
 
     const css = `
@@ -143,6 +155,7 @@ const Lesson = ({ number }) => {
                                 {number === '5' && <Lesson5 colors={themeColors[number]}/>}
                                 {number === '6' && <Lesson6 colors={themeColors[number]}/>}
                                 {number === '7' && <Lesson7 colors={themeColors[number]}/>}
+                                {number === '8' && <Lesson8 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>
