@@ -8,6 +8,7 @@ import Lesson5 from './lessons/lesson-5';
 import Lesson6 from './lessons/lesson-6';
 import Lesson7 from './lessons/lesson-7';
 import Lesson8 from './lessons/lesson-8';
+import Lesson9 from './lessons/lesson-9';
 
 const Lesson = ({ number }) => {
     
@@ -96,6 +97,17 @@ const Lesson = ({ number }) => {
         {title: 'Expressions in the Dialog', href: '8#expressions-in-the-dialogue'}
     ];
 
+    const linksLesson9 = [
+        {title: 'Lesson 9', href: null},
+        {title: 'Dialogue', href: '9#dialogue'},
+        {title: 'Full Verb Charts', href: '9#full-verb-charts'},
+        {title: 'The Obviative for VII', href: '9#the-obviative-for-vii'},
+        {title: 'Obviative Plural for Inanimates', href: '9#obviative-plural-for-inanimates'},
+        {title: 'VII Verbs Tied to Object Properties', href: '9#vii-verbs-tied-to-object-properties'},
+        {title: 'Participles', href: '9#participles'},
+        {title: 'Changed Conjunct in Question', href: '9#changed-conjunct-in-question'}
+    ];
+
     const links = { 
         '1': linksLesson1,
         '2': linksLesson2,
@@ -104,7 +116,8 @@ const Lesson = ({ number }) => {
         '5': linksLesson5,
         '6': linksLesson6,
         '7': linksLesson7,
-        '8': linksLesson8
+        '8': linksLesson8,
+        '9': linksLesson9
     };
 
     // Pair is [main, accent]
@@ -116,7 +129,8 @@ const Lesson = ({ number }) => {
         '5': ['#F7F73B', '#F5F59A'],
         '6': ['#3674F7', '#729EFC'],
         '7': ['#DE29F2', '#E88AF2'],
-        '8': ['#1DDCF5', '#9EEDF7']
+        '8': ['#1DDCF5', '#9EEDF7'],
+        '9': ['#E5F227', '#E7ED95']
     };
 
     const css = `
@@ -156,6 +170,7 @@ const Lesson = ({ number }) => {
                                 {number === '6' && <Lesson6 colors={themeColors[number]}/>}
                                 {number === '7' && <Lesson7 colors={themeColors[number]}/>}
                                 {number === '8' && <Lesson8 colors={themeColors[number]}/>}
+                                {number === '9' && <Lesson9 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>
