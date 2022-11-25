@@ -56,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: '/teachers-guide/9',
     element: <TeachersGuideTemplate number={'9'}/>
+  },
+  {
+    path: '/teachers-guide/10',
+    element: <TeachersGuideTemplate number={'10'}/>
   }
 ])
 

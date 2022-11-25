@@ -9,6 +9,7 @@ import Lesson6 from './lessons/lesson-6';
 import Lesson7 from './lessons/lesson-7';
 import Lesson8 from './lessons/lesson-8';
 import Lesson9 from './lessons/lesson-9';
+import Lesson10 from './lessons/lesson-10';
 
 const Lesson = ({ number }) => {
     
@@ -32,7 +33,7 @@ const Lesson = ({ number }) => {
         {title: 'Nouns for body parts', href: '2#nouns-for-body-parts'},
         {title: 'Adverbs', href: '2#adverbs'},
         {title: 'VAI verbs', href: '2#vai-verbs'}
-    ]
+    ];
 
     const linksLesson3 = [
         {title: 'Lesson 3', href: null},
@@ -43,7 +44,7 @@ const Lesson = ({ number }) => {
         {title: 'Demonstrative pronouns', href: '3#demonstrative-pronouns'},
         {title: 'Particles',  href: '3#particles'},
         {title: 'Adverbs', href: '3#adverbs'}
-    ]
+    ];
 
     const linksLesson4 = [
         {title: 'Lesson 4', href: null},
@@ -108,6 +109,13 @@ const Lesson = ({ number }) => {
         {title: 'Changed Conjunct in Question', href: '9#changed-conjunct-in-question'}
     ];
 
+    const linksLesson10 = [
+        {title: 'Lesson 10', href: null},
+        {title: 'Dialogue', href: '10#dialogue'},
+        {title: 'A Full VTI Chart', href: '10#a-full-vti-chart'},
+        {title: 'Miscellaneous Things from the Dialog', href: '10#miscellaneous-things-from-the-dialog'}
+    ]
+
     const links = { 
         '1': linksLesson1,
         '2': linksLesson2,
@@ -117,7 +125,8 @@ const Lesson = ({ number }) => {
         '6': linksLesson6,
         '7': linksLesson7,
         '8': linksLesson8,
-        '9': linksLesson9
+        '9': linksLesson9,
+        '10': linksLesson10
     };
 
     // Pair is [main, accent]
@@ -130,7 +139,8 @@ const Lesson = ({ number }) => {
         '6': ['#3674F7', '#729EFC'],
         '7': ['#DE29F2', '#E88AF2'],
         '8': ['#1DDCF5', '#9EEDF7'],
-        '9': ['#E5F227', '#E7ED95']
+        '9': ['#E5F227', '#E7ED95'],
+        '10': ['#f211d0', '#FC9AEE']
     };
 
     const css = `
@@ -171,6 +181,7 @@ const Lesson = ({ number }) => {
                                 {number === '7' && <Lesson7 colors={themeColors[number]}/>}
                                 {number === '8' && <Lesson8 colors={themeColors[number]}/>}
                                 {number === '9' && <Lesson9 colors={themeColors[number]}/>}
+                                {number === '10' && <Lesson10 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>
