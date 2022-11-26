@@ -118,6 +118,24 @@ table.full-border > tr > th {
     margin-left: auto;
 }
 
+.page-button-container a {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-bottom: 1em;
+}
+
+.next-button:hover {
+    color: #2C2F33 !important;
+}
+
+.prev-button:hover {
+    color: #2C2F33 !important;
+}
+
 
 /* ----- Additional Card Styles ----- */
 .cards {
@@ -162,7 +180,6 @@ table.full-border > tr > th {
     line-height: 60px;
     flex: 1 0 60px;
 }
-
 
 /* ----- MEDIA QUERIES ----- */
 @media screen and (max-width: 801px) {
