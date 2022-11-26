@@ -2,10 +2,10 @@ import React from 'react';
 import Title from '../../components/title';
 import DialoguePlayer from '../../components/dialogue-player';
 
-const Lesson1A = ({ colors }) => {
+const Lesson1 = () => {
     return (
         <div>
-            <Title lesson='1' text='Lesson 1' accent={colors[1]}/>
+            <Title lesson='1' text='Lesson 1' />
             <h2 id='dialogue'>Dialogue</h2>
             <DialoguePlayer src='/assets/audio/Dialogue-1.mp3'/>
             <table className='dialogue-table'>
@@ -390,4 +390,4 @@ const Lesson1A = ({ colors }) => {
     );
 }
 
-export default Lesson1A;
+export default Lesson1;

@@ -2,10 +2,10 @@ import React from 'react';
 import Title from '../../components/title';
 import DialoguePlayer from '../../components/dialogue-player';
 
-const Lesson9 = ({ colors }) => {
+const Lesson9 = () => {
     return (
         <div>
-            <Title lesson='9' text='Lesson 9' accent={colors[1]}/>
+            <Title lesson='9' text='Lesson 9' />
             
             <h2 id='dialogue'>Dialogue</h2>
             <DialoguePlayer src='/assets/audio/Dialogue-9.mp3'/>

@@ -108,6 +108,17 @@ table.full-border > tr > th {
     border-bottom: 1px solid darkgray;
 }
 
+/* ----- Prev/Next Page Buttons ----- */
+.page-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.next-only a {
+    margin-left: auto;
+}
+
+
 /* ----- Additional Card Styles ----- */
 .cards {
     display: flex;

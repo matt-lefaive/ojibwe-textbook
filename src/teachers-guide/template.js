@@ -1,5 +1,7 @@
 import React from 'react';
 import Sidebar from '../components/sidebar';
+import PageButtons from '../components/page-buttons';
+
 import Lesson1 from './lessons/lesson-1';
 import Lesson2 from './lessons/lesson-2';
 import Lesson3 from './lessons/lesson-3';
@@ -15,6 +17,10 @@ import Lesson12 from './lessons/lesson-12';
 
 const Lesson = ({ number }) => {
     
+    const lessonOrder = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+    const nextLesson = number === lessonOrder[lessonOrder.length - 1] ? '1' : lessonOrder[lessonOrder.indexOf(number) + 1];
+    const prevLesson = number === lessonOrder[0] ? '1' : lessonOrder[lessonOrder.indexOf(number) - 1];
+
     const linksLesson1 = [
         {title: 'Lesson 1', href: null}, // text
         {title: 'Dialogue', href: '1#dialogue'}, // link
@@ -164,6 +170,23 @@ const Lesson = ({ number }) => {
         '12': ['#1DF2AB', '#A7FADE']
     };
 
+
+    // Build pagination object for prev/next buttons
+    const pagination = {};
+    for (let i = 0; i < lessonOrder.length; i++) {
+        pagination[lessonOrder[i]] = {
+            prev: i === 0 ? null : {
+                href: `/teachers-guide/${lessonOrder[i-1]}`, 
+                text: `← Lesson ${lessonOrder[i-1]}`
+            },
+            next: i === lessonOrder.length - 1 ? null : {
+                href: `/teachers-guide/${lessonOrder[i+1]}`, 
+                text: `Lesson ${lessonOrder[i+1]} →`
+            }
+        }
+    }
+
+    
     const css = `
         main strong {
             color: ${themeColors[number][0]}
@@ -180,6 +203,29 @@ const Lesson = ({ number }) => {
         main a:hover {
             color: ${themeColors[number][0]}
         }
+
+        .lesson-circle {
+            border: 5px solid ${themeColors[number][1]}
+        }
+
+        .page-button-container a {
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 1em 2em;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .next-button:hover {
+            background-color: ${themeColors[nextLesson][0]};
+            color: #2C2F33 !important;
+        }
+
+        .prev-button:hover {
+            background-color: ${themeColors[prevLesson][0]};
+            color: #2C2F33 !important;
+        }
     `;
 
     return (
@@ -193,18 +239,19 @@ const Lesson = ({ number }) => {
                     <main class='col ps-md-2 pt-2'>
                         <div class='container lesson-container' style={{padding: '1em 2em 1em 2em'}}>
                             <div class='row'>
-                                {number === '1' && <Lesson1 colors={themeColors[number]}/>}
-                                {number === '2' && <Lesson2 colors={themeColors[number]}/>}
-                                {number === '3' && <Lesson3 colors={themeColors[number]}/>}
-                                {number === '4' && <Lesson4 colors={themeColors[number]}/>}
-                                {number === '5' && <Lesson5 colors={themeColors[number]}/>}
-                                {number === '6' && <Lesson6 colors={themeColors[number]}/>}
-                                {number === '7' && <Lesson7 colors={themeColors[number]}/>}
-                                {number === '8' && <Lesson8 colors={themeColors[number]}/>}
-                                {number === '9' && <Lesson9 colors={themeColors[number]}/>}
-                                {number === '10' && <Lesson10 colors={themeColors[number]}/>}
-                                {number === '11' && <Lesson11 colors={themeColors[number]}/>}
-                                {number === '12' && <Lesson12 colors={themeColors[number]}/>}
+                                {number === '1' && <Lesson1 />}
+                                {number === '2' && <Lesson2 />}
+                                {number === '3' && <Lesson3 />}
+                                {number === '4' && <Lesson4 />}
+                                {number === '5' && <Lesson5 />}
+                                {number === '6' && <Lesson6 />}
+                                {number === '7' && <Lesson7 />}
+                                {number === '8' && <Lesson8 />}
+                                {number === '9' && <Lesson9 />}
+                                {number === '10' && <Lesson10 />}
+                                {number === '11' && <Lesson11 />}
+                                {number === '12' && <Lesson12 />}
+                                {<PageButtons prev={pagination?.[number]?.prev} next={pagination?.[number]?.next}/>}
                             </div>
                         </div>
                     </main>
