@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import Sidebar from '../components/sidebar';
 import PageButtons from '../components/page-buttons';
 
@@ -15,8 +16,9 @@ import Lesson10 from './lessons/lesson-10';
 import Lesson11 from './lessons/lesson-11';
 import Lesson12 from './lessons/lesson-12';
 
-const Lesson = ({ number }) => {
-    
+const Lesson = () => {
+    const { number } = useParams();
+
     const lessonOrder = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
     const nextLesson = number === lessonOrder[lessonOrder.length - 1] ? '1' : lessonOrder[lessonOrder.indexOf(number) + 1];
     const prevLesson = number === lessonOrder[0] ? '1' : lessonOrder[lessonOrder.indexOf(number) - 1];
