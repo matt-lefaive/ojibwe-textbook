@@ -5,7 +5,7 @@ import DialoguePlayer from '../../components/dialogue-player';
 const Lesson10 = ({ colors }) => {
     return (
         <div>
-            <Title lesson='10' text='Lesson 10' accent={colors[1]}/>
+            <Title lesson='10' text='VTI Full Verb Chart: Waabandan, Minwendan' accent={colors[1]}/>
             
             <h2 id='dialogue'>Dialogue</h2>
             <DialoguePlayer src='/assets/audio/Dialogue-10.mp3'/>

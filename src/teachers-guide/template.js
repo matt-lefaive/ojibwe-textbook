@@ -10,6 +10,7 @@ import Lesson7 from './lessons/lesson-7';
 import Lesson8 from './lessons/lesson-8';
 import Lesson9 from './lessons/lesson-9';
 import Lesson10 from './lessons/lesson-10';
+import Lesson11 from './lessons/lesson-11';
 
 const Lesson = ({ number }) => {
     
@@ -114,7 +115,16 @@ const Lesson = ({ number }) => {
         {title: 'Dialogue', href: '10#dialogue'},
         {title: 'A Full VTI Chart', href: '10#a-full-vti-chart'},
         {title: 'Miscellaneous Things from the Dialog', href: '10#miscellaneous-things-from-the-dialog'}
-    ]
+    ];
+
+    const linksLesson11 = [
+        {title: 'Lesson 11', href: null},
+        {title: 'Dialogue', href: '11#dialogue'},
+        {title: 'More VTI Verbs', href: '11#more-vti-verbs'},
+        {title: 'Conjunct Forms in the Dialog', href: '11#conjunct-forms-in-the-dialog'},
+        {title: 'Usage of Conjunct Forms', href: '11#usage-of-conjunct-forms'},
+        {title: 'Related Words', href: '11#related-words'}
+    ];
 
     const links = { 
         '1': linksLesson1,
@@ -126,7 +136,8 @@ const Lesson = ({ number }) => {
         '7': linksLesson7,
         '8': linksLesson8,
         '9': linksLesson9,
-        '10': linksLesson10
+        '10': linksLesson10,
+        '11': linksLesson11
     };
 
     // Pair is [main, accent]
@@ -140,7 +151,8 @@ const Lesson = ({ number }) => {
         '7': ['#DE29F2', '#E88AF2'],
         '8': ['#1DDCF5', '#9EEDF7'],
         '9': ['#E5F227', '#E7ED95'],
-        '10': ['#f211d0', '#FC9AEE']
+        '10': ['#f211d0', '#FC9AEE'],
+        '11': ['#EBC21E', '#F5E08C']
     };
 
     const css = `
@@ -182,6 +194,7 @@ const Lesson = ({ number }) => {
                                 {number === '8' && <Lesson8 colors={themeColors[number]}/>}
                                 {number === '9' && <Lesson9 colors={themeColors[number]}/>}
                                 {number === '10' && <Lesson10 colors={themeColors[number]}/>}
+                                {number === '11' && <Lesson11 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>
