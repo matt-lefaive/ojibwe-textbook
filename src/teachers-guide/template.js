@@ -11,6 +11,7 @@ import Lesson8 from './lessons/lesson-8';
 import Lesson9 from './lessons/lesson-9';
 import Lesson10 from './lessons/lesson-10';
 import Lesson11 from './lessons/lesson-11';
+import Lesson12 from './lessons/lesson-12';
 
 const Lesson = ({ number }) => {
     
@@ -126,6 +127,12 @@ const Lesson = ({ number }) => {
         {title: 'Related Words', href: '11#related-words'}
     ];
 
+    const linksLesson12 = [
+        {title: 'Lesson 12', href: null},
+        {title: 'Dialogue', href: '12#dialogue'},
+        {title: 'Grammar', href: '12#grammar'}
+    ];
+
     const links = { 
         '1': linksLesson1,
         '2': linksLesson2,
@@ -137,7 +144,8 @@ const Lesson = ({ number }) => {
         '8': linksLesson8,
         '9': linksLesson9,
         '10': linksLesson10,
-        '11': linksLesson11
+        '11': linksLesson11,
+        '12': linksLesson12
     };
 
     // Pair is [main, accent]
@@ -152,7 +160,8 @@ const Lesson = ({ number }) => {
         '8': ['#1DDCF5', '#9EEDF7'],
         '9': ['#E5F227', '#E7ED95'],
         '10': ['#f211d0', '#FC9AEE'],
-        '11': ['#EBC21E', '#F5E08C']
+        '11': ['#EBC21E', '#F5E08C'],
+        '12': ['#1DF2AB', '#A7FADE']
     };
 
     const css = `
@@ -195,6 +204,7 @@ const Lesson = ({ number }) => {
                                 {number === '9' && <Lesson9 colors={themeColors[number]}/>}
                                 {number === '10' && <Lesson10 colors={themeColors[number]}/>}
                                 {number === '11' && <Lesson11 colors={themeColors[number]}/>}
+                                {number === '12' && <Lesson12 colors={themeColors[number]}/>}
                             </div>
                         </div>
                     </main>
