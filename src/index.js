@@ -7,26 +7,21 @@ import {
 
 import './styles/index.css';
 
-import Home from './home';
+import LessonTemplate from './pages/template';
+import Home from './pages/home';
 
-import TeachersGuideTemplate from './teachers-guide/template';
-import TeachersGuideHome from './teachers-guide/home';
-
-import TeachersGuideLesson1 from './teachers-guide/lessons/lesson-1';
-import TeachersGuideLesson2 from './teachers-guide/lessons/lesson-2';
-import TeachersGuideLesson3 from './teachers-guide/lessons/lesson-3';
-import TeachersGuideLesson4 from './teachers-guide/lessons/lesson-4';
-import TeachersGuideLesson5 from './teachers-guide/lessons/lesson-5';
-import TeachersGuideLesson6 from './teachers-guide/lessons/lesson-6';
-import TeachersGuideLesson7 from './teachers-guide/lessons/lesson-7';
-import TeachersGuideLesson8 from './teachers-guide/lessons/lesson-8';
-import TeachersGuideLesson9 from './teachers-guide/lessons/lesson-9';
-import TeachersGuideLesson10 from './teachers-guide/lessons/lesson-10';
-import TeachersGuideLesson11 from './teachers-guide/lessons/lesson-11';
-import TeachersGuideLesson12 from './teachers-guide/lessons/lesson-12';
-
-// Create Teacher's Guide Children Pages
-const teachersGuideChildren = [];
+import Lesson1 from './lessons/lesson-1';
+import Lesson2 from './lessons/lesson-2';
+import Lesson3 from './lessons/lesson-3';
+import Lesson4 from './lessons/lesson-4';
+import Lesson5 from './lessons/lesson-5';
+import Lesson6 from './lessons/lesson-6';
+import Lesson7 from './lessons/lesson-7';
+import Lesson8 from './lessons/lesson-8';
+import Lesson9 from './lessons/lesson-9';
+import Lesson10 from './lessons/lesson-10';
+import Lesson11 from './lessons/lesson-11';
+import Lesson12 from './lessons/lesson-12';
 
 
 const router = createBrowserRouter([
@@ -35,60 +30,56 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: '/teachers-guide-home',
-    element: <TeachersGuideHome />
-  },
-  {
-    path: '/teachers-guide/',
-    element: <TeachersGuideTemplate />,
+    path: '/lesson/',
+    element: <LessonTemplate />,
     children: [
       {
         path: '1',
-        element: <TeachersGuideLesson1 />
+        element: <Lesson1 />
       },
       {
         path: '2',
-        element: <TeachersGuideLesson2 />
+        element: <Lesson2 />
       },
       {
         path: '3',
-        element: <TeachersGuideLesson3 />
+        element: <Lesson3 />
       },
       {
         path: '4',
-        element: <TeachersGuideLesson4 />
+        element: <Lesson4 />
       },
       {
         path: '5',
-        element: <TeachersGuideLesson5 />
+        element: <Lesson5 />
       },
       {
         path: '6',
-        element: <TeachersGuideLesson6 />
+        element: <Lesson6 />
       },
       {
         path: '7',
-        element: <TeachersGuideLesson7 />
+        element: <Lesson7 />
       },
       {
         path: '8',
-        element: <TeachersGuideLesson8 />
+        element: <Lesson8 />
       },
       {
         path: '9',
-        element: <TeachersGuideLesson9 />
+        element: <Lesson9 />
       },
       {
         path: '10',
-        element: <TeachersGuideLesson10 />
+        element: <Lesson10 />
       },
       {
         path: '11',
-        element: <TeachersGuideLesson11 />
+        element: <Lesson11 />
       },
       {
         path: '12',
-        element: <TeachersGuideLesson12 />
+        element: <Lesson12 />
       }
     ]
   }

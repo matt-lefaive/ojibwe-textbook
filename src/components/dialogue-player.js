@@ -1,11 +1,13 @@
 import React from 'react';
 
-const DialoguePlayer = ({ src }) => {
+const DialoguePlayer = ({ src, title }) => {
     return (
-        <audio controls>
-            <source src={src} type='audio/mpeg'/>
-            Your browser does not support the audio element
-        </audio>
+        <div>
+            <audio controls>
+                <source src={src} type='audio/mpeg'/>
+                Your browser does not support the audio element
+            </audio>
+        </div>
     )
 }
 

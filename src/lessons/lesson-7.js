@@ -1,11 +1,11 @@
 import React from 'react';
-import Title from '../../components/title';
-import DialoguePlayer from '../../components/dialogue-player';
-import Sidebar from '../../components/sidebar';
-import PageButtons from '../../components/page-buttons';
-import LessonCSS from '../../components/lesson-css';
+import Title from '../components/title';
+import MultiPlayer from '../components/multi-player';
+import Sidebar from '../components/sidebar';
+import PageButtons from '../components/page-buttons';
+import LessonCSS from '../components/lesson-css';
 
-const TeachersGuideLesson7 = () => {
+const Lesson7 = () => {
     const sidebarLinks = [
         { title: 'Lesson 7', href: null },
         { title: 'Dialogue', href: '7#dialogue' },
@@ -20,11 +20,11 @@ const TeachersGuideLesson7 = () => {
 
     const pagination = {
         next: {
-            href: '/teachers-guide/8',
+            href: '/lesson/8',
             text: 'Lesson 8'
         },
         prev: {
-            href: '/teachers-guide/6',
+            href: '/lesson/6',
             text: 'Lesson 6'
         }
     }
@@ -42,7 +42,11 @@ const TeachersGuideLesson7 = () => {
                         <Title lesson='7' text='Lesson 7' />
 
                         <h2 id='dialogue'>Dialogue</h2>
-                        <DialoguePlayer src='/assets/audio/Dialogue-7.mp3' />
+                        
+                        <MultiPlayer 
+                            srcs={['/assets/audio/Dialogue_7.mp3', '/assets/audio/Dialogue_7_Slow.mp3']}
+                            titles={['Normal', 'Slow']}
+                        />
 
                         <table className='dialogue-table'>
                             <tr>
@@ -518,4 +522,4 @@ const TeachersGuideLesson7 = () => {
     )
 }
 
-export default TeachersGuideLesson7;
+export default Lesson7;

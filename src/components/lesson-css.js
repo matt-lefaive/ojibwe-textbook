@@ -3,23 +3,23 @@ import React from 'react';
 const LessonCSS = ({ main, accent }) => {
     const css = `
         main strong {
-            color: ${main}
+            color: ${main};
         }
         
         main em {
-            color: ${accent}
+            color: ${accent};
         }
 
         main a {
-            color: ${accent}
+            color: ${accent};
         }
 
         main a:hover {
-            color: ${main}
+            color: ${main};
         }
 
         .lesson-circle {
-            border: 5px solid ${accent}
+            border: 5px solid ${accent};
         }
 
         .next-button:hover {
@@ -27,6 +27,10 @@ const LessonCSS = ({ main, accent }) => {
         }
 
         .prev-button:hover {
+            background-color: ${main};
+        }
+
+        .home-button:hover {
             background-color: ${main};
         }
     `;

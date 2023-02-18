@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Title from '../../components/title';
-import Sidebar from '../../components/sidebar';
-import DialoguePlayer from '../../components/dialogue-player';
-import PageButtons from '../../components/page-buttons';
-import LessonCSS from '../../components/lesson-css';
+import Title from '../components/title';
+import Sidebar from '../components/sidebar';
+import PageButtons from '../components/page-buttons';
+import LessonCSS from '../components/lesson-css';
+import MultiPlayer from '../components/multi-player';
 
-const TeachersGuideLesson1 = () => {
+const Lesson1 = () => {
     const sidebarLinks = [
         { title: 'Lesson 1', href: null }, // text
         { title: 'Dialogue', href: '1#dialogue' }, // link
@@ -23,7 +23,7 @@ const TeachersGuideLesson1 = () => {
 
     const pagination = {
         next: {
-            href: '/teachers-guide/2',
+            href: '/lesson/2',
             text: 'Lesson 2'
         },
         prev: null
@@ -40,9 +40,15 @@ const TeachersGuideLesson1 = () => {
                 <div class='container lesson-container' style={{ padding: '1em 2em 1em 2em' }}>
                     <div class='row'>
                         {<PageButtons prev={pagination.prev} next={pagination.next} />}
+                        
                         <Title lesson='1' text='Lesson 1' />
+                        
                         <h2 id='dialogue'>Dialogue</h2>
-                        <DialoguePlayer src='/assets/audio/Dialogue-1.mp3' />
+                        <MultiPlayer 
+                            srcs={['/assets/audio/Dialogue_1.mp3', '/assets/audio/Dialogue_1_Slow.mp3']}
+                            titles={['Normal', 'Slow']}
+                        />
+                        
                         <table className='dialogue-table'>
                             <tr>
                                 <td>A. Nimbakade. Gibakade na?</td>
@@ -389,7 +395,7 @@ const TeachersGuideLesson1 = () => {
                             </tr>
                         </table>
                         <p>
-                            So the addition of the <strong>wii-</strong> prefix makes the <strong>g</strong> in <strong>giiwe</strong> change into a <strong>k</strong>. These prefixes sometimes cause a weak consonant that follows to change into a strong consonant. We have a whole supplementary lesson explaining what weak and strong consonants are, available <a href=''>here</a>. This sound change does not affect all weak consonants that follow the prefix – it is predictable, but the rules are a bit complex. We will explain them fully later in the course.
+                            So the addition of the <strong>wii-</strong> prefix makes the <strong>g</strong> in <strong>giiwe</strong> change into a <strong>k</strong>. These prefixes sometimes cause a weak consonant that follows to change into a strong consonant. We have a whole supplementary lesson explaining what weak and strong consonants are, available <a href='#'>here</a>. This sound change does not affect all weak consonants that follow the prefix – it is predictable, but the rules are a bit complex. We will explain them fully later in the course.
                         </p>
                         <p>
                             We also used another preverb in the dialog, <strong>awi-</strong>. This one is what linguists call a “directional preverb,” in that its meaning implies doing something in motion or in a certain place. Here, the sentence <strong>Niwii-awi-wiisin endaayaan</strong> means “I’m going to go eat at my place.” The preverb <strong>awi-</strong> functions a lot like the verb “go” in the English translation. If the speaker were already home, and were saying that they plan to remain at home and eat, they would simply say <strong>Niwii-wiisin endaayaan</strong>. But because they are currently somewhere else and are indicating that they will 1) go elsewhere and then 2) eat, the preverb <strong>awi-</strong> conveys that meaning. Directional preverbs go after tense markers, giving us <strong>niwii-awi-wiisin</strong>.
@@ -429,4 +435,4 @@ const TeachersGuideLesson1 = () => {
     );
 }
 
-export default TeachersGuideLesson1;
+export default Lesson1;

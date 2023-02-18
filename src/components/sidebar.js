@@ -1,4 +1,5 @@
 import React from 'react';
+import { redirect } from 'react-router-dom';
 
 const Sidebar = ({ links, background }) => {
     return (
@@ -7,13 +8,19 @@ const Sidebar = ({ links, background }) => {
                 {links.map((x, _) => {
                     if (x.href) { // Regular Link
                         return (
-                            <a
-                                key={x.title}
-                                href={x.href}
-                                class='sidebar-link'
-                                style={{backgroundColor: background}}>
-                                {x.title}
-                            </a>
+                            <div style={{display: 'flex', marginBottom: '8px'}}>
+                                <div className='bullet'>•</div>
+                                <div style={{marginLeft: '1em', marginBottom: '4px'}}>
+                                    <a
+                                        key={x.title}
+                                        href={x.href}
+                                        class='sidebar-link'
+                                    >
+                                        {x.title}
+                                    </a>
+                                </div>
+                            </div>
+                            
                         )
                     } else if (x.title) {
                         return (

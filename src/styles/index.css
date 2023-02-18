@@ -5,11 +5,20 @@ body {
     color: white;
 }
 
+footer {
+    background-color: #262626;
+    border: 1px solid #262626;
+}
+
+footer p.footer-text {
+    margin: 2rem auto;
+    text-align: center;
+}
 
 
 /* ----- Sidebar Styling (Bootstrap Override) ----- */
 #sidebar-nav {
-    padding-top: 1em;
+    padding: 1em;
     width: 250px;
     position: sticky;
     position: -webkit-sticky;
@@ -20,10 +29,11 @@ body {
 
 a.sidebar-link {
     text-decoration: none;
-    margin-left: 2em;
     color: #2C2F33;
     font-size: 18px;
     margin-top: 5px;
+    line-height: 18px;
+    margin-bottom: 1rem;
 }
 
 a.sidebar-link:hover {
@@ -31,10 +41,10 @@ a.sidebar-link:hover {
 }
 
 div.sidebar-text {
-    font-style: italic;
     font-size: 24px;
     color: #2C2F33;
     margin-left: 1em;
+    margin-bottom: 1em;
 }
 
 div.sidebar-divider {
@@ -43,6 +53,12 @@ div.sidebar-divider {
     background-color: #2C2F33;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+#sidebar-nav .bullet {
+    font-size: 2em;
+    line-height: 1rem;
+    color: #2C2F33 !important;
 }
 
 /* ----- Tables ----- */
@@ -114,10 +130,6 @@ table.full-border > tr > th {
     justify-content: space-between;
 }
 
-.next-only a {
-    margin-left: auto;
-}
-
 .page-button-container a {
     color: white;
     border: 2px solid white;
@@ -136,22 +148,42 @@ table.full-border > tr > th {
     color: #2C2F33 !important;
 }
 
+.home-button:hover {
+    color: #2C2F33 !important;
+}
+
+/* ----- Audio Players ----- */
+
 
 /* ----- Additional Card Styles ----- */
 .cards {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .lesson-card {
     width: 10rem;
     height: 12rem;
     margin: 1em;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid white;
 }
 
 .lesson-card:hover {
     transform: scale(1.03);
     transition: 0.25s ease-in-out;
+}
+
+.lesson-card-image, .lesson-card-image svg {
+    height: 8rem;
+    width: 10rem;
+}
+
+.card-text {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
 }
 
 /* ----- Lesson Styles ----- */
