@@ -23,6 +23,9 @@ import Lesson10 from './lessons/lesson-10';
 import Lesson11 from './lessons/lesson-11';
 import Lesson12 from './lessons/lesson-12';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+
 
 const router = createBrowserRouter([
   {
