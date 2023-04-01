@@ -15,7 +15,6 @@ footer p.footer-text {
     text-align: center;
 }
 
-
 /* ----- Sidebar Styling (Bootstrap Override) ----- */
 #sidebar-nav {
     padding: 1em;
@@ -59,6 +58,16 @@ div.sidebar-divider {
     font-size: 2em;
     line-height: 1rem;
     color: #2C2F33 !important;
+}
+
+/* ----- Text Pages ----- */
+.text-page-container {
+    width: calc(4 * (10rem + 2em + 2px));
+    margin: 2em auto;
+}
+
+.text-page-container ol > li {
+    margin-bottom: 1em;
 }
 
 /* ----- Tables ----- */
@@ -130,7 +139,15 @@ table.full-border > tr > th {
     justify-content: space-between;
 }
 
-.page-button-container a {
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(4 * (10rem + 2em + 2px));
+    margin-top: 1.5em;
+    padding: 0 1.2em;
+}
+
+.page-button-container a, .button-container a {
     color: white;
     border: 2px solid white;
     border-radius: 10px;
@@ -140,16 +157,13 @@ table.full-border > tr > th {
     margin-bottom: 1em;
 }
 
-.next-button:hover {
+.next-button:hover, .prev-button:hover, .home-button:hover {
     color: #2C2F33 !important;
 }
 
-.prev-button:hover {
+.button-container a:hover {
     color: #2C2F33 !important;
-}
-
-.home-button:hover {
-    color: #2C2F33 !important;
+    background-color: white;
 }
 
 /* ----- Audio Players ----- */
@@ -160,6 +174,7 @@ table.full-border > tr > th {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    max-width: calc(4 * (10rem + 2em + 2px));
 }
 
 .lesson-card {

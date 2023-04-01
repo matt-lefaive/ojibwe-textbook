@@ -9,6 +9,12 @@ import './styles/index.css';
 
 import LessonTemplate from './pages/template';
 import Home from './pages/home';
+import Introduction from './pages/introduction';
+import HowToUse from './pages/how-to-use';
+import DialectNotes from './pages/dialect-notes';
+import DownloadableResources from './pages/downloadable-resources';
+import Credits from './pages/credits';
+import NotFound from './pages/not-found';
 
 import Lesson1 from './lessons/lesson-1';
 import Lesson2 from './lessons/lesson-2';
@@ -26,11 +32,30 @@ import Lesson12 from './lessons/lesson-12';
 //import ReactGA from 'react-ga';
 //ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
 
-
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />
+  },
+  {
+    path: '/introduction',
+    element: <Introduction />
+  },
+  {
+    path: '/how-to-use',
+    element: <HowToUse />
+  },
+  {
+    path: '/dialect-notes',
+    element: <DialectNotes />
+  },
+  {
+    path: '/downloadable-resources',
+    element: <DownloadableResources />
+  },
+  {
+    path: '/credits',
+    element: <Credits />
   },
   {
     path: '/lesson/',
@@ -85,6 +110,10 @@ const router = createBrowserRouter([
         element: <Lesson12 />
       }
     ]
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ], {basename: '/ojibwe-textbook'});
 

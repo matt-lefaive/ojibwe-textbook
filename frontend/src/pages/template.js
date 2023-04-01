@@ -8,6 +8,10 @@ const Lesson = () => {
         ReactGA.pageview(window.location.pathname + window.location.search);
     }, []);*/
     
+    useEffect(() => {
+        document.title = 'Ojibwe Textbook'
+    }, []);
+
     return (
         <>
             <div class='container-fluid'>

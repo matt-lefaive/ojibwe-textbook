@@ -9,6 +9,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static('build'));
 
+app.get('/download/:file', (req, res) => {
+    const file = `${__dirname}/uploads/${req.params.file}`
+    res.download(file);
+});
+
 app.get('*', (req, res) => {                       
     res.sendFile(path.resolve(__dirname, 'build', 'index.html'));                               
 });

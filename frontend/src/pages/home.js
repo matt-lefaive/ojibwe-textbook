@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import LessonCard from '../components/lesson-card';
 
 import Apple from '../svg/Apple';
@@ -17,10 +18,19 @@ import Tree from '../svg/Tree';
 const Home = () => {
     const HOME_URL = '/ojibwe-textbook';
     
+    useEffect(() => {
+        document.title = 'Ojibwe Textbook'
+    }, []);
+
     return (
         <>
-            <div className='container'>
-                <h1 style={{marginTop: '1em'}}>Introductory Ojibwe I</h1>
+            <div className='container' style={{maxWidth: 'calc(4 * (10rem + 2em + 10px))'}}>
+                <h1 style={{marginTop: '1em', textAlign: 'center'}}>Introductory Ojibwe I</h1>
+                <div className='button-container'>
+                    <Link className='button' to='/introduction'>Introduction</Link>
+                    <Link className='button' to='/how-to-use'>How To Use This Course</Link>
+                    <Link className='button' to='/dialect-notes'>Dialect Notes</Link>
+                </div>
                 <div className='cards'>
                     <LessonCard
                         text='Lesson 1'
@@ -82,6 +92,10 @@ const Home = () => {
                         url={`${HOME_URL}/lesson/12`}
                         image={<Handshake />}    
                     />
+                </div>
+                <div className='button-container'>
+                    <Link className='button' to='/downloadable-resources'>Downloadable Resources</Link>
+                    <Link className='button' to='/credits'>Credits & Contact</Link>
                 </div>
             </div>
         </>
