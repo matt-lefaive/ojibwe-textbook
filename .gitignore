@@ -47,3 +47,5 @@ backend/yarn-debug.log*
 backend/yarn-error.log*
 
 .DS_Store
+
+istock svgs

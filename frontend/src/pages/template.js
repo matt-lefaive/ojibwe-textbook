@@ -4,9 +4,9 @@ import Footer from '../components/Footer';
 import ReactGA from 'react-ga';
 
 const Lesson = () => {
-    useEffect(() => {
+    /*useEffect(() => {
         ReactGA.pageview(window.location.pathname + window.location.search);
-    }, []);
+    }, []);*/
     
     return (
         <>
